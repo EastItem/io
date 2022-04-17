@@ -146,14 +146,14 @@
             if (outType.length == 0) { outType = "实习" };
             var checkstatus = document.getElementById('checkbox1').checked;
             if (checkstatus == true) {
-                url = "https://eastitem.github.io/io/choose.html?studentName=" + name + "&studentId=" + id + "&studentSex=" + sex + "&className=" + className + "&specialty=" + specialty + "&departmentName=" + departmentName + "&auditName=" + auditName + "&outType=" + outType;
+                url = "https://eastitem.github.io/myio/choose.html?studentName=" + name + "&studentId=" + id + "&studentSex=" + sex + "&className=" + className + "&specialty=" + specialty + "&departmentName=" + departmentName + "&auditName=" + auditName + "&outType=" + outType;
             } else {
                 alert("请先阅读并同意免责说明书！");
             }
             return url
         };
         function gonext() {
-            url = geturl().replace("https://eastitem.github.io/io/","");
+            url = geturl().replace("https://eastitem.github.io/myio/","");
             window.location.href = url;
         }
     </script>
