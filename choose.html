@@ -22,96 +22,100 @@
     </style>
     <script src="js/jquery.js"></script>
 </head>
-<body >
-
-    <div class="colors-container">
-        <div class="color" style="background-color: black">
-
-            <div class="right" style="width:100%;   text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-
-            <div class="color-hex">black</div>
-        </div>
-        <div class="color" style="background-color: green">
-            <div class="right" style="width:100%; display:none;   text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex">green</div>
-        </div>
-        <div class="color" style="background-color: purple">
-            <div class="right" style="width: 100%; display: none; text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex">purple</div>
-        </div>
-        <div class="color" style="background-color: blueviolet">
-            <div class="right" style="width: 100%; display: none; text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex">blueviolet</div>
-        </div>
-        <div class="color" style="background-color: blue">
-            <div class="right" style="width: 100%; display: none; text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex">blue</div>
-        </div>
-        <div class="color" style="background-color: cadetblue">
-            <div class="right" style="width: 100%; display: none; text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex">cadetblue</div>
-        </div>
-
-        <div class="color" style="background-color: cyan">
-            <div class="right" style="width: 100%; display: none; text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex">cyan</div>
-        </div>
-
-        <div class="color" style="background-color: greenyellow">
-            <div class="right" style="width: 100%; display: none; text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex">greenyellow</div>
-        </div>
-
-        <div class="color" style="background-color: powderblue;flex:50%">
-            <div class="right" style="width: 100%; display: none; text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex" id="picktip">更多颜色</div>
-        </div>
-
-        <div class="color" style="background-color: palevioletred; flex: 50%" id="colorout">
-            <div class="color-hex">进入页面</div>
+<body>
+    <div style="background: cyan;">
+        <div style=" height: 130px;padding-top: 10px;">
+            <div style="font-size:20px"><b>公告</b></div><br>近期疫情较为严重，请不要随意外出。<br><br><span style="font-size: 13px;color: red;">注：码不经扫，遇扫则跑</span>
         </div>
     </div>
-    
-    <script>
-        var color1 = "black";
-        var strs = location.search; //获取url中"?"符后的字串
-        
+        <div class="colors-container">
+            <div class="color" style="background-color: black">
 
-        $(".color").click(function () {
-            if ($(this).children(".color-hex").text() == '进入页面') {
-                go();
-                return;
+                <div class="right" style="width:100%;   text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+
+                <div class="color-hex">black</div>
+            </div>
+            <div class="color" style="background-color: green">
+                <div class="right" style="width:100%; display:none;   text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+                <div class="color-hex">green</div>
+            </div>
+            <div class="color" style="background-color: purple">
+                <div class="right" style="width: 100%; display: none; text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+                <div class="color-hex">purple</div>
+            </div>
+            <div class="color" style="background-color: blueviolet">
+                <div class="right" style="width: 100%; display: none; text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+                <div class="color-hex">blueviolet</div>
+            </div>
+            <div class="color" style="background-color: blue">
+                <div class="right" style="width: 100%; display: none; text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+                <div class="color-hex">blue</div>
+            </div>
+            <div class="color" style="background-color: cadetblue">
+                <div class="right" style="width: 100%; display: none; text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+                <div class="color-hex">cadetblue</div>
+            </div>
+
+            <div class="color" style="background-color: cyan">
+                <div class="right" style="width: 100%; display: none; text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+                <div class="color-hex">cyan</div>
+            </div>
+
+            <div class="color" style="background-color: greenyellow">
+                <div class="right" style="width: 100%; display: none; text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+                <div class="color-hex">greenyellow</div>
+            </div>
+
+            <div class="color" style="background-color: powderblue;flex:50%">
+                <div class="right" style="width: 100%; display: none; text-align: center;">
+                    <div class="check-style-unequal-width"></div>
+                </div>
+                <div class="color-hex" id="picktip">更多颜色</div>
+            </div>
+
+            <div class="color" style="background-color: palevioletred; flex: 50%" id="colorout">
+                <div class="color-hex">进入页面</div>
+            </div>
+        </div>
+
+        <script>
+            var color1 = "black";
+            var strs = location.search; //获取url中"?"符后的字串
+
+
+            $(".color").click(function () {
+                if ($(this).children(".color-hex").text() == '进入页面') {
+                    go();
+                    return;
+                }
+                if ($(this).children(".color-hex").text() == '更多颜色') {
+                    window.location.href = "color.html" + strs;
+                    return;
+                }
+                color1 = $(this).children(".color-hex").text();
+
+                $(".right").css('display', 'none');
+                $(this).children(".right").css('display', 'block');
+            });
+            function go() {
+                window.location.href = "beta-default.html" + strs + '&color=' + color1;
             }
-            if ($(this).children(".color-hex").text() == '更多颜色') {
-                window.location.href = "color.html" + strs;
-                return;
-            }
-            color1 = $(this).children(".color-hex").text();
-         
-            $(".right").css('display', 'none');
-            $(this).children(".right").css('display', 'block');
-        });
-        function go() {
-            window.location.href = "beta-default.html" + strs + '&color=' + color1;
-        }
-    </script>
+        </script>
 </body>
 </html>
