@@ -2,6 +2,10 @@ var iset;
 var now = 0;
 var nowT;
 var endTime = new Date().getTime() + 300000;
+var randomNum = '';
+for (var i = 0; i < 5; i++) {
+    randomNum += Math.floor(Math.random() * 10);
+}
 function outshcool() {
     now = new Date().getTime();
     nowT = setInterval(function () {
@@ -17,6 +21,17 @@ function outshcool() {
     //$("#typeBox").css("animation", dateColorArr[getday()] + " 0.6s infinite");
     //$("#typeBox").css("-webkit-animation", dateColorArr[getday()] + " 0.6s infinite");
     $("body").css("background", getParam()['color']);
+
+    //生成二维码
+    $("#ewmBox").html(
+        "<div id='qrcode' style='border:20px solid #fff;display:block;margin: 20px auto;width:210px;height:210px'></div>"
+    );
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width: 170,
+        height: 170
+    });
+    qrcode.makeCode("yiban_scan_result1BTLJZ" + new Date().Format("yyyyMMdd" + randomNum));
+
 }
 function inshcool() {
     now = new Date().getTime();
@@ -31,6 +46,17 @@ function inshcool() {
     $("#studentName").html(getParam()['studentName'] + "（" + getParam()['studentId'] + "）");
     $("#typeBox").html("入");
     $("body").css("background", getParam()['color']);
+
+    //生成二维码
+    $("#ewmBox").html(
+        "<div id='qrcode' style='border:20px solid #fff;display:block;margin: 20px auto;width:210px;height:210px'></div>"
+    );
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width: 170,
+        height: 170
+    });
+    qrcode.makeCode("yiban_scan_result1BTLJZ" + new Date().Format("yyyyMMdd" + randomNum));
+
 }
 
 function formatDuring(mss) {
